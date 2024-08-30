@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #a2c2e8, #f0f4f8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden; /* Prevents scrollbars during animation */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* College Header */
+.college-header {
+    background-color: #0056b3; /* Suitable color for the backend */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    animation: fadeInSlideUp 1.5s ease-out;
+}
+
+.college-header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Welcome Text */
+.welcome-text {
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    animation: bounceIn 1s ease-out;
+}
+
+/* Login Options */
+.login-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.login-link {
+    display: block;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    box-sizing: border-box;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
+    border: 2px solid transparent;
+    animation: slideIn 0.5s ease-out;
+}
+
+.login-link:hover {
+    background-color: #e9ecef;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: #007bff;
+}
+
+.login-link h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.login-link p {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .college-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .login-link {
+        width: 260px;
+        padding: 25px;
+    }
+
+    .college-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .welcome-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .login-options {
+        gap: 15px;
+    }
+
+    .login-link {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .college-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .welcome-text {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .college-header {
+        padding: 15px;
+    }
+
+    .college-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .welcome-text {
+        font-size: 1.4rem;
+    }
+
+    .login-link h2 {
+        font-size: 1.6rem;
+    }
+
+    .login-link p {
+        font-size: 1rem;
+    }
+}

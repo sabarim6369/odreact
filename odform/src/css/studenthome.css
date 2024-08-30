@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #a2c2e8, #f0f4f8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* New Styles for OD Info Boxes */
+.od-info-boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    flex-wrap: wrap; /* Added to wrap boxes on smaller screens */
+}
+
+.od-box {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 48%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 20px; /* Space between boxes */
+}
+
+.od-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.internal-od {
+    background: #e0f7fa;
+}
+
+.external-od {
+    background: #ffe0b2;
+}
+
+.od-box h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.od-box p {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Existing Container Styles */
+.container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.logout {
+    background-color: #e74c3c;
+}
+
+.logout:hover {
+    background-color: #c0392b;
+}
+
+/* Message Styles */
+.od {
+    background-color: #f0ad4e;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Change Password Button */
+.change-password {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.change-password:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .od-info-boxes {
+        width: 90%;
+        margin-top: 40px;
+    }
+
+    .od-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .change-password {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .od-info-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .od-box {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .change-password {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .od-info-boxes {
+        margin-top: 20px;
+    }
+
+    .od-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .change-password {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}
+/* Change Password Button */
+.change-password {
+    position: fixed; /* Change from absolute to fixed positioning */
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.change-password:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .change-password {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .change-password {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .change-password {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .change-password {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+}
+
