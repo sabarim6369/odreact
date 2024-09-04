@@ -46,14 +46,15 @@ body {
     font-weight: 700;
     animation: bounceIn 1s ease-out;
 }
-
 /* Login Options */
 .login-options {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    flex-direction: row; /* Ensure horizontal layout */
 }
+
 
 .login-link {
     display: block;
@@ -170,7 +171,6 @@ button:hover {
         font-size: 1.8rem;
     }
 }
-
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -178,6 +178,7 @@ button:hover {
 
     .login-options {
         gap: 15px;
+        flex-direction: column; /* Stack vertically on smaller screens */
     }
 
     .login-link {
@@ -194,7 +195,6 @@ button:hover {
         font-size: 1.6rem;
     }
 }
-
 @media (max-width: 576px) {
     .college-header {
         padding: 15px;
@@ -214,5 +214,39 @@ button:hover {
 
     .login-link p {
         font-size: 1rem;
+    }
+}
+/* Login Options */
+.login-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row; /* Ensure horizontal layout */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .login-options {
+        gap: 15px;
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .login-link {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .college-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .welcome-text {
+        font-size: 1.6rem;
     }
 }
