@@ -29,7 +29,7 @@ function Studentlogin({ msg }) {
             console.log(response.data);
 
             if (response.data.success) {
-                navigate('/studenthome'); 
+                navigate('/studenthome', { state: response.data }); 
             } else {
               
                 setErr(response.data.msg || 'An unexpected error occurred');

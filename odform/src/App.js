@@ -6,6 +6,9 @@ import Studentlogin from './components/studentlogin';
 import TeacherLogin from './components/teacherlogin';
 import HodLogin from './components/hodlogin';
 import Studenthome from './components/studenthome';
+import StudentSignup from './components/studentsignup';
+import OnDutyForm from './components/studentodinfo';
+import Previousod from './components/previousod';
 function App() {
   return (
   
@@ -16,6 +19,11 @@ function App() {
       <Route path="/teacherlogin" element={<TeacherLogin/>}/>
       <Route path="/hodlogin" element={<HodLogin/>}/>
       <Route path="/studenthome" element={<Studenthome/>}/>
+      <Route path="/studentsignup" element={<StudentSignup/>}/>
+      <Route path="/studentodinfo" element={<OnDutyForm/>}/>
+      <Route path="/studentodinfo/:email" element={<OnDutyForm />} />
+      <Route path="/previousod" element={<Previousod />} />
+      {/* <Route path="/studenthome2" element={<Studenthome/>}/> */}
     </Routes>
    </Router>
  
